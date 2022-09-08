@@ -1,5 +1,5 @@
 ---
-title: "SDS 192 Mini-Project 1 Contributions"
+title: "SDS 192 Mini-Project 3 Contributions"
 subtitle: "SDS 192"
 author: 
 - name: Author One
