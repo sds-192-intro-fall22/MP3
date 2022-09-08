@@ -30,7 +30,7 @@ While not a formal part of the assessment for this lab, I do expect that you wil
 
 3. **Very Important**: Read Factors to Consider [memo] (https://www.epa.gov/system/files/documents/2022-02/factorstoconsider_approved-by-opa_1.25.22-copy.pdf)
 
-4. Review the [data documentation](https://www.epa.gov/system/files/documents/2021-10/tri-basic-data-file-documentation-ry2020_100721.pdf). Specifically, the data dictionary for this dataset spans pages 5-18. To help you make sense of this data, I will note that the unit of observation in this dataset is a certain chemical release at a particular facility. If a facility reports on more than one chemical, that facility will appear multiple times in the dataset (once for each chemical reported). This means both the facility ID and the chemical ID are needed to uniquely identify each row.  
+4. Review the [data documentation](https://www.epa.gov/system/files/documents/2021-10/tri-basic-data-file-documentation-ry2020_100721.pdf). Specifically, the data dictionary for this dataset spans pages 5-18. 
 
 > **It will be important for you to know that the CRS for TRI data is 4269.**
 
@@ -57,7 +57,9 @@ Here are some resources for researching fenceline communities:
   - Filter the data to your county. 
   - As you read in the documentation, quantitative values are sometimes reported in pounds and and sometimes reported in grams in this dataset. Convert all quantitative values to a common unit of measure with a single line of code. 
 
-> Important note: This is a multi-dimensional dataset. Each row indicates a quantity of releases, but this is not the total quantity of releases for a facility. It is the total quantity *of a particular chemical* for a facility. This means that the same facility will be repeated multiple times in the dataset - once for each toxic chemical it released in 2020. It also means that you need two variables to uniquely identify each row - the facility and the chemical. It's really important to keep this in mind when performing any data wrangling or creating any visualizations with this dataset. Check out the example below to see why. 
+### A Note on the Unit of Observation in TRI
+
+This is a multi-dimensional dataset. Each row indicates a quantity of releases, but this is not the total quantity of releases for a facility. It is the total quantity *of a particular chemical* for a facility. This means that the same facility will be repeated multiple times in the dataset - once for each toxic chemical it released in 2020. It also means that you need two variables to uniquely identify each row - the facility and the chemical. It's really important to keep this in mind when performing any data wrangling or creating any visualizations with this dataset. Check out the example below to see why. 
 
 | facility      | industry         | chemical | releases |
 |---------------|------------------|----------|----------|
@@ -66,7 +68,7 @@ Here are some resources for researching fenceline communities:
 | red facility  | mining           | benzene  | 4        |
 | red facility  | mining           | ammonia  | 5        |
 
-> Let's say you wanted to know the number of facilities per industry type in this dataset. If I just counted the number of times each industry type appeared in the `industry` column, `R` would indicate that there are two electronic waste facilities and two mining facilities. But this is not the case, right? There is only one electronic waste facility (the blue facility), and only one mining facilty (the red facility). They are separated across multiple rows because they released different types of toxic chemicals and reported releases for each. You'll need to perform some kind of data aggregation in this case to get an accurate count. 
+Let's say you wanted to know the number of facilities per industry type in this dataset. If I just counted the number of times each industry type appeared in the `industry` column, `R` would indicate that there are two electronic waste facilities and two mining facilities. But this is not the case, right? There is only one electronic waste facility (the blue facility), and only one mining facilty (the red facility). They are separated across multiple rows because they released different types of toxic chemicals and reported releases for each. You'll need to perform some kind of data aggregation in this case to get an accurate count. 
 
 ## Clean Data and Perform Analysis
 
@@ -76,7 +78,7 @@ Here are some resources for researching fenceline communities:
 - Your analysis must iterate a self-defined function over multiple rows or variables.
 - Your analysis must include at least two chloropleth maps overlaying TRI data on other data sources. 
 
-As long as these three criteria are met, there is not a minimum number of analyses or code chunks in this assignment. For example, you might decide to iterate a function that includes a pivot or that creates a map in order to meet two criteria at once. Or you might decide that you want to meet these three criteria in separate code chunks. Either approach is fine. Below, I will provide a few hints to help you think about how you might going about meeting these criteria.
+As long as these three criteria are met, there is not a minimum number of analyses or code chunks in this assignment. For example, you might decide to iterate a function that includes a pivot or that creates a map in order to meet two criteria at once. Or you might decide that you want to meet each of these three criteria in separate analyses. Either approach is fine. Below, I will provide a few hints to help you think about how you might going about meeting these criteria.
 
 ### Pivot Hints
 
@@ -90,8 +92,8 @@ Because this is a multi-dimensional dataset, one approach to this assignment wou
 
 It's up to you to find other data to map on this plot, but I will provide three options that might be interesting:
 
-- [Census data via `tidycensus`](https://walker-data.com/tidycensus/articles/basic-usage.html)
-  - Note that getting this set-up can be non-trivial so reach out to me if you need help
+- [Race or ethnicity data via `tidycensus`](https://walker-data.com/tidycensus/articles/basic-usage.html)
+  - Note that getting this set-up can be non-trivial, so reach out to me if you need help
 - [Historic Redlining Maps](https://dsl.richmond.edu/panorama/redlining/#loc=5/39.1/-94.58&text=downloads)]
 - [CDC's Places Dataset](https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Local-Data-for-Better-Health-Census-Tract-D/cwsq-ngmh)
 
