@@ -2,7 +2,7 @@
 
 # Overview
 
-In this mini-project, you will analyze the Environmental Protection Agency's Toxic Release Inventory to profile a "fenceline community" in the United States. Fenceline communities are neighborhoods in close proximity to high-risk chemical facilities, and are often sites of environmental racism and other environmental justice concerns. Your analysis will include a series of maps that help us understand the risks the community faces and you will be expected to iterate a self-defined function in your analysis. The final output of the project can be in whatever format you wish (a blog post, a report, a poster, a video, etc) as long as it renders in quarto and you produce 400-500 words of text summarizing and interpreting your findings. 
+In this mini-project, you will analyze the Environmental Protection Agency's Toxic Release Inventory to profile a "fenceline community" in the United States. Fenceline communities are neighborhoods in close proximity to high-risk chemical facilities, and are often sites of environmental racism and other environmental justice concerns. Your analysis will include a series of maps that help us understand the risks the community faces and you will be expected to iterate a self-defined function in your analysis. The final output of the project can be in whatever format you wish (a blog post, a report, a poster, a video, etc) as long as it renders in quarto and you produce 400-500 words of text summarizing and interpreting your findings. **Be sure to format your rendered files using techniques you learned in SDS 100!**
 
 # Learning Goals
 
