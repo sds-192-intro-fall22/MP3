@@ -117,12 +117,12 @@ You will be evaluated on the extent to which your mini-project demonstrates flue
 
 * Tidying Data:
   * 1 point - Demonstrates an ability to import local data
-  * 1 point - Demonstrates an ability to mutate across multiple variables at once
+  * 1 point - Demonstrates an ability to clean columns with `mutate`
   * 1 point - Demonstrates an ability to perform a pivot
 * Programming in R
-  * 1 point - Demonstrates an ability to write a function
-  * 1 point - Demonstrates an ability to iterate a function over multiple rows or variables
-  * 1 point - Demonstrates an ability to minimize repeated lines of code
+  * 1 point - Demonstrates an ability to write a custom function
+  * 1 point - Demonstrates an ability to iterate a function over multiple values in a vector
+  * 1 point - Demonstrates an ability to discern different data object types in `R`
 * Mapping
   * 1 point - Demonstrates an ability to produce point and/or polygon-based maps with descriptive title and labels
   * 1 point - Demonstrates an ability to transform data to an appropriate CRS
